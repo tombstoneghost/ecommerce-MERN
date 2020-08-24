@@ -47,4 +47,4 @@ export const getCategories = () => {
     .catch(err => {
         console.log(err);
     });
-}
+};
