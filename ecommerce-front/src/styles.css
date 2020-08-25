@@ -4,6 +4,22 @@
     border-radius: 0px;
 }
 
+.cart-badge {
+    border-radius: 45%;
+    padding: 2px 3px;
+    font-size: 12px;
+    font-style: italic;
+    background: #000000;
+}
+
+.cart-badge:hover {
+    border-radius: 45%;
+    padding: 2px 3px;
+    font-size: 12px;
+    font-style: italic;
+    background: #000000;
+}
+
 .name {
     background: indigo;
     color: #fff;
