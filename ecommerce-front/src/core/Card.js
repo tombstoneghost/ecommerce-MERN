@@ -12,7 +12,6 @@ const Card = ({
   showRemoveProductButton = false,
   setRun = f => f,
   run = undefined
-  // changeCartSize
 }) => {
   const [redirect, setRedirect] = useState(false);
   const [count, setCount] = useState(product.count);
@@ -28,8 +27,9 @@ const Card = ({
   };
   
 const addToCart = () => {
-    // console.log('added');
-    addItem(product, setRedirect(true));
+    addItem(product, () => {
+      setRedirect(true);
+    });
   };
  
   const shouldRedirect = redirect => {
