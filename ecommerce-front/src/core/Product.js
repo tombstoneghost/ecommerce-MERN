@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Layout from './Layout';
 import {listRelated, read} from './apiCore';
 import Card from './Card';
+import {withRouter} from 'react-router-dom';
 
 const Product = (props) => {
     const [product, setProduct] = useState({});
@@ -52,4 +53,4 @@ const Product = (props) => {
     );
 };
 
-export default Product;
+export default withRouter(Product);

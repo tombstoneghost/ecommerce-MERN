@@ -1,4 +1,6 @@
 const User = require('../models/users');
+const {Order} = require('../models/order');
+const { errorHandler } = require('../helpers/dbErrorHandlers');
 
 exports.userById = (req, res, next, id) => {
     User.findById(id).exec((err, user) => {
@@ -20,7 +22,7 @@ exports.read = (req, res) => {
 };
 
 exports.update = (req, res) => {
-    User.findOneAndUpdate({_id: req.profile._id}, {$set: req.body}, {new: true}), (err, user) => {
+    User.findOneAndUpdate({_id: req.profile._id}, {$set: req.body}, {new: true}, (err, user) => {
         if(err) {
             return res.status(400).json({
                 error: 'You are not authorized to permison this action'
@@ -29,7 +31,7 @@ exports.update = (req, res) => {
         user.hashedPassword = undefined;
         user.salt = undefined;
         res.json(user);
-    };
+    });
 };
 
 exports.addOrderToUserHistory = (req, res, next) => {
@@ -55,4 +57,18 @@ exports.addOrderToUserHistory = (req, res, next) => {
         }
         next();
     })
+};
+
+exports.purchaseHistory = (req, res) => {
+    Order.find({user: req.profile._id})
+    .populate('user', '_id name')
+    .sort('-created')
+    .exec((err, orders) => {
+        if(err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+        res.json(orders);
+    });
 };
