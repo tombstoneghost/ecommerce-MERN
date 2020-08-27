@@ -1,5 +1,5 @@
 # E Commerce Web Application 
-An Online Book Store which is free, reliable, secured and fast management system providing features like CRUD operations on products, Purchasing a Product, Adding to Cart, Proceeding with a Payment Gateway, etc. 
+An Online Book Store which is free, reliable, secure and fast management system providing features like CRUD operations on products, purchasing a product, adding to cart, proceeding with a payment gateway, etc. 
 
 **Stack:** MERN
 **Reference:** [Udemy Course](https://www.udemy.com/course/react-node-ecommerce/)
