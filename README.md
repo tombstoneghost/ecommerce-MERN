@@ -42,6 +42,10 @@ Upcoming Features:
 
     git clone https://github.com/tombstoneghost/ecommerce-MERN
     cd ecommerce-MERN
+    cd Server
+    npm install
+    cd ..
+    cd ecommerce-front
     npm install
 
  
@@ -60,3 +64,7 @@ Create a file with name `.env` in the Server folder and add the following code.
 Create a file with name `.env` in the `ecommerce-front` folder and add the following. 
 
     REACT_APP_API_URL=http://localhost:8000/api
+
+
+## Note
+If you find any bug in the code, kindly open an issue for the same.
