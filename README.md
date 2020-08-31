@@ -2,8 +2,17 @@
 An Online Book Store which is a free, reliable, user interactive and fast management system providing features like CRUD operations on products, purchasing a product, adding to cart, proceeding with a payment gateway, etc 
 
 **Stack:** MERN
+<br>
 **Reference:** [Udemy Course](https://www.udemy.com/course/react-node-ecommerce/)
 <br>
+## Technologies Used
+ - [React](https://reactjs.org/)
+ - [Node JS](https://nodejs.org/en/)
+ - [Mongo DB](https://www.mongodb.com/)
+ - [Express JS](https://expressjs.com/)
+ - [BrainTree](https://www.braintreepayments.com/)
+<br>
+
 ### The website has the following features: 
 
  - Search Product
